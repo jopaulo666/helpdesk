@@ -1,1 +1,1 @@
-Esse sistema é um serviço de atendimento aos clientes que procuram por soluções, esclarecimentos sobre dúvidas e outras solicitaçõs para problemas técnicos relacionada a TI.
+Esse sistema é um serviço de atendimento aos clientes que procuram por soluções, esclarecimentos sobre dúvidas e outras solicitações para problemas técnicos relacionada a TI.
