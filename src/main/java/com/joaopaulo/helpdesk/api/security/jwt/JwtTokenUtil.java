@@ -3,6 +3,7 @@ package com.joaopaulo.helpdesk.api.security.jwt;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -70,7 +71,7 @@ public class JwtTokenUtil implements Serializable{
 	
 	//gera o token
 	public String generateToken(UserDetails userDetails) {
-		java.util.Map<String, Object> claims = new HashMap<>();
+		Map<String, Object> claims = new HashMap<>();
 		
 		claims.put(CLAIM_KLAY_USERNAME, userDetails.getUsername());
 		
