@@ -60,7 +60,7 @@ public class JwtTokenUtil implements Serializable{
 		} catch (Exception e) {
 			claims =null;
 		}
-		return null;
+		return claims;
 	}
 	
 	//verifica se o token está expirado
@@ -76,11 +76,12 @@ public class JwtTokenUtil implements Serializable{
 		claims.put(CLAIM_KLAY_USERNAME, userDetails.getUsername());
 		
 		final Date createDate = new Date();
+		claims.put(CLAIM_KLAY_CREATED, createDate);
 		
 		return doGenerateToken(claims);
 	}
 
-	private String doGenerateToken(java.util.Map<String, Object> claims) {
+	private String doGenerateToken(Map<String, Object> claims) {
 		final Date createDate = (Date) claims.get(CLAIM_KLAY_CREATED);
 		final Date expirationDate = new Date(createDate.getTime() + expiration * 1000);
 		return Jwts.builder().setClaims(claims).setExpiration(expirationDate)
@@ -113,15 +114,3 @@ public class JwtTokenUtil implements Serializable{
 	}
 
 }
-
-
-
-
-
-
-
-
-
-
-
-

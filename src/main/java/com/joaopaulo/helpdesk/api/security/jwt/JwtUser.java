@@ -17,7 +17,6 @@ public class JwtUser implements UserDetails{
 	private final Collection<? extends GrantedAuthority> authority;
 	
 	public JwtUser(String id, String username, String password, Collection<? extends GrantedAuthority> authority) {
-		super();
 		this.id = id;
 		this.username = username;
 		this.password = password;
